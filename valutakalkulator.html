@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valutakalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Valutakalkulator</h1></header>
+    <nav>
+        <div class="forside"><p>Kalkulator</p></div>
+        <div class="tidligere"><p>Lagrede konverteringer</p></div>
+        <div class="favoritt"><p>Favoritter</p></div>
+        <div class="historikk"><p>Valuta historikk</p></div>
+    </nav>
+    <main>
+        <div class="kalkulator">
+            <div class="belop">
+
+            </div>
+            <div class="konverter">
+                <button id="konverterKnapp" onclick="konverterValuta()">Konverter</button>
+            </div>
+            <div class="konverter_til">
+
+            </div>
+        </div>
+        <div class="vanlig_valuta"></div>
+        <div class="lagrede_konverteringer"></div>
+        <div class="favoritt_valuta"></div>
+        <div class="valuta_historikk">
+            <div class="input"></div>
+            <div class="historikk_liste"></div>
+        </div>
+        <div class="tilgjengelig_valuta"></div>
+    </main>
+    <footer>
+        <p>Tjenesten støtter ikke Nord-Koreanske Won (KPW)</p>
+        <p>Noen valutaer kan være usikre, bruker bes være oppmerksom på disse</p>
+    </footer>
+</body>
+</html>

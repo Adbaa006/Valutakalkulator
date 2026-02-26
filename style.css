@@ -17,8 +17,12 @@ a:visited {
     background-color: transparent;
     text-decoration: none;
 }
-.grid_container {
-    max-width: 1140px;
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+.grid-container {
+    width: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto;
@@ -28,4 +32,69 @@ a:visited {
     'nav'
     'main'
     'footer';
+}
+header {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: rgb(230, 249, 255);
+}
+nav {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: rgb(230, 249, 255);
+}
+.forside,
+.tidligere,
+.favoritt,
+.historikk {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgb(182, 238, 255);
+}
+main {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: rgb(230, 249, 255);
+}
+#kalkulator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+button {
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(101, 194, 255);
+}
+button:hover {
+    background-color: rgb(55, 143, 201);
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: rgb(230, 249, 255);
 }

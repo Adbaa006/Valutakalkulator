@@ -7,37 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><h1>Valutakalkulator</h1></header>
-    <nav>
-        <a href="#kalkulator"><div class="forside"><p>Kalkulator</p></div></a>
-        <a href="#lagrede_konverteringer"><div class="tidligere"><p>Lagrede konverteringer</p></div></a>
-        <a href="#favoritt_valuta"><div class="favoritt"><p>Favoritter</p></div></a>
-        <a href="#valuta_historikk"><div class="historikk"><p>Valuta historikk</p></div></a>
-    </nav>
-    <main>
-        <div id="kalkulator">
-            <div class="belop">
-
-            </div>
-            <div class="konverter">
-                <button id="konverterKnapp" onclick="konverterValuta()">Konverter</button>
-            </div>
-            <div class="konverter_til">
-
-            </div>
+    <div class="flex-container">
+        <div class="grid-container">
+            <header><h1>Valutakalkulator</h1></header>
+            <nav>
+                <a href="#kalkulator"><div class="forside"><p>Kalkulator</p></div></a>
+                <a href="#lagrede_konverteringer"><div class="tidligere"><p>Lagrede konverteringer</p></div></a>
+                <a href="#favoritt_valuta"><div class="favoritt"><p>Favoritter</p></div></a>
+                <a href="#valuta_historikk"><div class="historikk"><p>Valuta historikk</p></div></a>
+            </nav>
+            <main>
+                <div id="kalkulator">
+                    <div class="belop">
+                        <div class="flagg_belop">Flagg</div>
+                        <div class="valuta">Valuta du skal konvertere fra</div>
+                        <div class="belop_innput">Beløpet du skal konvertere</div>
+                    </div>
+                    <div class="konverter">
+                        <button id="konverterKnapp" onclick="konverterValuta()">Konverter</button>
+                    </div>
+                    <div class="konverter_til">
+                        <div class="flagg_konverter">Flagg</div>
+                        <div class="valuta_konverter">Valuta du skal konvertere til</div>
+                        <div class="belop_konverter">Beløpet etter at du har konvertert</div>
+                        <p id="out">x</p>
+                    </div>
+                </div>
+                <div class="vanlig_valuta"></div>
+                <div id="lagrede_konverteringer"></div>
+                <div id="favoritt_valuta"></div>
+                <div id="valuta_historikk">
+                    <div class="innput"></div>
+                    <div class="historikk_liste"></div>
+                </div>
+                <div class="tilgjengelig_valuta"></div>
+            </main>
+            <footer>
+                <p>Tjenesten støtter ikke Nord-Koreanske Won (KPW)</p>
+                <p>Noen valutaer kan være usikre, bruker bes være oppmerksom på disse</p>
+            </footer>
         </div>
-        <div class="vanlig_valuta"></div>
-        <div id="lagrede_konverteringer"></div>
-        <div id="favoritt_valuta"></div>
-        <div id="valuta_historikk">
-            <div class="input"></div>
-            <div class="historikk_liste"></div>
-        </div>
-        <div class="tilgjengelig_valuta"></div>
-    </main>
-    <footer>
-        <p>Tjenesten støtter ikke Nord-Koreanske Won (KPW)</p>
-        <p>Noen valutaer kan være usikre, bruker bes være oppmerksom på disse</p>
-    </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

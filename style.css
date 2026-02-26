@@ -11,6 +11,12 @@ svg {
     vertical-align: middle;
     height: auto;
 }
+a:link,
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
 .grid_container {
     max-width: 1140px;
     margin: 0 auto;

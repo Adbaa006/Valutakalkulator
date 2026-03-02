@@ -113,3 +113,18 @@ button:hover {
   font-weight: 500;
   min-height: 24px;
 }
+
+footer {
+      width: 100%;
+  padding: 12px;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+}

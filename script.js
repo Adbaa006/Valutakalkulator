@@ -100,8 +100,8 @@ konverterKnapp.addEventListener("click", async () => {
     }
 
     if (!data.conversion_rates[til]) {
-    alert("Ugyldig valutakode");
-    return;
+      alert("Ugyldig valutakode");
+      return;
     }
     const kurs = data.conversion_rates[til];
     const konvertert = (belop * kurs).toFixed(2);

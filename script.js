@@ -6,7 +6,9 @@ const tilValuta = document.getElementById("tilValuta");
 const belopInput = document.getElementById("belop");
 const resultat = document.getElementById("resultat");
 const konverterKnapp = document.getElementById("konverter");
+const valutaListe = document.getElementById("valutaListe");
 
+/* Script som kun tillater bruker å velge valuta
 // Hent valutaer når siden starter
 async function hentValutaer() {
   try {
@@ -39,13 +41,50 @@ async function hentValutaer() {
 }
 
 hentValutaer();
+*/
 
+// Script som tillater bruker å skrive inn valuta selv
+
+async function hentValutaer() {
+  try {
+    const respons = await fetch(`${BASE_URL}/latest/USD`);
+    const data = await respons.json();
+
+    if (data.result !== "success") {
+      throw new Error("API-feil");
+    }
+
+    const valutaer = Object.keys(data.conversion_rates);
+
+    valutaListe.innerHTML = "";
+
+    valutaer.forEach(valuta => {
+      const option = document.createElement("option");
+      option.value = valuta;
+      valutaListe.appendChild(option);
+    });
+
+  } catch (feil) {
+    console.error("Feil:", feil);
+    alert("Kunne ikke hente valutaer.");
+  }
+}
+
+hentValutaer();
+
+fraValuta.addEventListener("input", () => {
+  fraValuta.value = fraValuta.value.toUpperCase();
+});
+
+tilValuta.addEventListener("input", () => {
+  tilValuta.value = tilValuta.value.toUpperCase();
+});
 
 // Konvertering
 konverterKnapp.addEventListener("click", async () => {
   const belop = parseFloat(belopInput.value);
-  const fra = fraValuta.value;
-  const til = tilValuta.value;
+  const fra = fraValuta.value.toUpperCase();
+  const til = tilValuta.value.toUpperCase();
 
   if (!belop) {
     alert("Skriv inn et beløp");
@@ -56,6 +95,14 @@ konverterKnapp.addEventListener("click", async () => {
     const respons = await fetch(`${BASE_URL}/latest/${fra}`);
     const data = await respons.json();
 
+    if (data.result !== "success") {
+      throw new error("API-feil");
+    }
+
+    if (!data.conversion_rates[til]) {
+    alert("Ugyldig valutakode");
+    return;
+    }
     const kurs = data.conversion_rates[til];
     const konvertert = (belop * kurs).toFixed(2);
 

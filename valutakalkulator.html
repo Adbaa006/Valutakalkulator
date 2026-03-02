@@ -14,9 +14,10 @@
       <main>
         <input type="number" id="belop" placeholder="Beløp">
         <div class="valuta-rad">
-          <select id="fraValuta" ></select>
+          <input list="valutaListe" id="fraValuta" placeholder="Fra valuta (f. eks NOK)">
           <span>→</span>
-          <select id="tilValuta"></select>
+          <input list="valutaListe" id="tilValuta" placeholder="Til valuta (f. eks USD)">
+          <datalist id="valutaListe"></datalist>
         </div>
         <button id="konverter">Konverter</button>
 

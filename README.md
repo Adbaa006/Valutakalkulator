@@ -1,3 +1,1 @@
-Koden lager en relativt enkel valutakalkulator.
-Den fungerer ved at brukeren skriver inn valutaen den vil konvertere fra, og valutaen den vil konvertere til. Enn så lenge er det kun valutakoder som er aksepterte inputs.
-Når brukeren trykker på "Konverter" gjøres en utregning og resultatet vises i boksen under.
+Koden lager en relativt enkel valutakalkulator. Den fungerer ved at brukeren skriver inn valutaen den vil konvertere fra, og valutaen den vil konvertere til. Enn så lenge er det kun valutakoder som er aksepterte inputs. Når brukeren trykker på "Konverter" gjøres en utregning og resultatet vises i boksen under. Jeg begynte først med håp om å få til et mye større prosjekt, å lage en valutakalkulator med flere funksjoner. Det viste seg dessverre å bli for omfattende, så jeg tonet det helt tilbake til det grunnleggende.

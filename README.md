@@ -1,0 +1,1 @@
+Koden lager en relativt enkel valutakalkulator.

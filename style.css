@@ -91,10 +91,23 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
 }
+.svar {
+    width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+}
 
 /* Resultat */
 #resultat {
-  margin-top: 20px;
   text-align: center;
   font-size: 18px;
   font-weight: 500;

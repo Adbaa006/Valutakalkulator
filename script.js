@@ -80,11 +80,29 @@ tilValuta.addEventListener("input", () => {
   tilValuta.value = tilValuta.value.toUpperCase();
 });
 
+function sjekkUgyldigValuta(valuta) {
+  const ugyldigeValutaer = ["ARS", "LYD", "SSP", "SYP", "VES", "YER", "ZWL"]
+
+  if (ugyldigeValutaer.includes(valuta.toUpperCase())) {
+    return !confirm(
+      `Valutakoden "${valuta.toUpperCase()}" er en usikker valuta.\nVil du likevel fortsette?`
+    );
+    // Hvis brukeren trykker "OK", returneres false, konverteringen gjøres likevel
+    // Hvis brukeren trykker "Avbryt", returneres true, konverteringen stoppes
+  }
+
+  return false;
+}
+
 // Konvertering
 konverterKnapp.addEventListener("click", async () => {
   const belop = parseFloat(belopInput.value);
   const fra = fraValuta.value.toUpperCase();
   const til = tilValuta.value.toUpperCase();
+
+  if (sjekkUgyldigValuta(fra) || sjekkUgyldigValuta(til)) {
+    return;
+  }
 
   if (!belop) {
     alert("Skriv inn et beløp");

@@ -6,20 +6,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Valutakalkulator</h1>
-</header>
-<main>
-  <input type="number" id="belop" placeholder="Beløp">
+  <div class="container">
+    <div class="kort">
+      <header>
+        <h1>Valutakalkulator</h1>
+      </header>
+      <main>
+        <input type="number" id="belop" placeholder="Beløp">
+        <div class="valuta-rad">
+          <select id="fraValuta" ></select>
+          <span>→</span>
+          <select id="tilValuta"></select>
+        </div>
+        <button id="konverter">Konverter</button>
 
-  <select id="fraValuta" ></select>
-
-  <select id="tilValuta"></select>
-
-  <button id="konverter">Konverter</button>
-
-  <p id="resultat"></p>
-</main>
+        <p id="resultat"></p>
+      </main>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
